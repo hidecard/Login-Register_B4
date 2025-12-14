@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('views'));
 
 app.use(session({
     secret: process.env.JWT_SECRET || 'defaultSecret',
